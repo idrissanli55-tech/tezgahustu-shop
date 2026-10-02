@@ -17,7 +17,7 @@ export default async function Home() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {products?.map((product) => (
           <div key={product.id} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
-            <h2 className="text-xl font-semibold mb-2">{product.isim || product.name}</h2>
+            <h2 className="text-xl font-semibold mb-2">{product.title}</h2>
             <p className="text-gray-600 mb-4">{product.aciklama || product.description}</p>
             <p className="text-2xl font-bold text-green-600">{product.fiyat || product.price} ₺</p>
           </div>
