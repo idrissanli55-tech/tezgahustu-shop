@@ -3,7 +3,7 @@ import { supabase } from '../lib/supabase';
 export default async function Home() {
   // Supabase'den verileri çekiyoruz. Tablonun adı farklıysa 'urunler' kısmını değiştir (örn: 'products').
   const { data: products, error } = await supabase
-    .from('urunler') 
+    .from('products') 
     .select('*');
 
   if (error) {
