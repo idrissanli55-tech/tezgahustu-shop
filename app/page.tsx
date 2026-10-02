@@ -1,7 +1,7 @@
 import { supabase } from '../lib/supabase';
 
 export default async function Home() {
-  // Supabase'den verileri çekiyoruz. Tablonun adı farklıysa 'urunler' kısmını değiştir (örn: 'products').
+  // Veritabanındaki 'products' tablosundan tüm ürünleri çekiyoruz
   const { data: products, error } = await supabase
     .from('products') 
     .select('*');
